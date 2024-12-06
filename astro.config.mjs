@@ -8,6 +8,6 @@ export default defineConfig({
   output: 'hybrid',
   experimental: {
     hybridOutput: true,
-  }
+  },
   integrations: [react(), solidJs(),]
 });
