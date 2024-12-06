@@ -2,6 +2,7 @@ import { useStore } from '@nanostores/solid';
 import { $cart as cart, removeItemFromCart, subTotal } from '../stores/cart';
 import styles from './cart.module.css';
 import { Show, createSignal } from 'solid-js';
+import { Component } from 'solid-js';
 
 function formatCurrency(amount: number) {
 	return new Intl.NumberFormat('en-US', {
@@ -29,7 +30,7 @@ const CheckoutNotice = () => {
 	return <p class={styles.notice}>Checkout is not implemented yet.</p>;
 };
 
-export const Cart = () => {
+export const Cart: Component  = () => {
 	const [showNotice, setShowNotice] = createSignal(false);
 	const $cart = useStore(cart);
 	const $subtotal = useStore(subTotal);
