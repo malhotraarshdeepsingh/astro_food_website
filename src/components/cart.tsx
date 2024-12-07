@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/solid';
-import { $cart as cart, removeItemFromCart, subTotal } from '../stores/cart';
+import { cart, removeItemFromCart, subtotal } from '../stores/cart';
 import styles from './cart.module.css';
 import { Show, createSignal } from 'solid-js';
 import { Component } from 'solid-js';
@@ -33,7 +33,7 @@ const CheckoutNotice = () => {
 export const Cart: Component  = () => {
 	const [showNotice, setShowNotice] = createSignal(false);
 	const $cart = useStore(cart);
-	const $subtotal = useStore(subTotal);
+	const $subtotal = useStore(subtotal);
 
 	return (
 		<aside class={styles.cart}>

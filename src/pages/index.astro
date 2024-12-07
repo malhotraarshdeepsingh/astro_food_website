@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/default.astro';
-import heroImg from '../images/sandwich-hero.jpg';
+import heroImg from '../assets/sandwich-hero.jpg';
 import ShopItems from '../components/shop-items.astro';
-import newsletterImg from '../images/newsletter.jpg';
+import newsletterImg from '../assets/newsletter.jpg';
 ---
 
 <html lang="en">
@@ -21,7 +21,7 @@ import newsletterImg from '../images/newsletter.jpg';
 				<a href="/shop" class="big-link"> Shop Now </a>
 			</div>
 			<img
-				src={heroImg}
+				src={heroImg.src}
 				alt="A delicious sandwich"
 				class="hero-image"
 				loading="eager"
@@ -35,7 +35,7 @@ import newsletterImg from '../images/newsletter.jpg';
 		</section>
 
 		<section class="block newsletter">
-			<img src={newsletterImg} alt="A sandwich and a cup of coffee" />
+			<img src={newsletterImg.src} alt="A sandwich and a cup of coffee" />
 			<div class="copy">
 				<h3>Prefer youe sandwiches to go?</h3>
 				<p>
