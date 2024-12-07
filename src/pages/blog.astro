@@ -14,13 +14,13 @@ const blogPosts = await getCollection('blog');
 				return (
 					<div class="post">
 						<h2>
-							<a href={`/blog/${post.slug}`}>{post.data.title}</a>
+							<a href={`/astro_food_website/blog/${post.slug}`}>{post.data.title}</a>
 						</h2>
 						<time datetime={post.data.date.toISOString()}>
 							{post.data.date.toDateString()}
 						</time>
 						<p>{post.data.description}</p>
-						<a href={`/blog/${post.slug}`} class="big-link">
+						<a href={`/astro_food_website/blog/${post.slug}`} class="big-link">
 							read post
 						</a>
 					</div>
@@ -30,7 +30,7 @@ const blogPosts = await getCollection('blog');
 	</section>
 
 	<p class="feed">
-		<a href="/rss.xml">
+		<a href="/astro_food_website/rss.xml">
 			<span role="img" aria-label="satellite dish">📡</span>
 			<span class="link-text">Subscribe to the RSS Feed</span>
 		</a>
