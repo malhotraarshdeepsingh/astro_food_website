@@ -7,6 +7,7 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   output: 'static',
   site: 'https://malhotraarshdeepsingh.github.io/astro_food_website/',
+  base: '/astro_food_website/',
   experimental: {
     assets: true
   },
