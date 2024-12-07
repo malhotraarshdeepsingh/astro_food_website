@@ -5,10 +5,11 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  site: 'https://astro-frontend-masters.netlify.app',
+  output: 'static',
+  site: 'https://malhotraarshdeepsingh.github.io/astro_food_website/',
   experimental: {
     assets: true
   },
   integrations: [solidJs(), react(), mdx()],
+  outDir: 'dist'
 });
